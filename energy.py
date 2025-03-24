@@ -5,6 +5,10 @@ import sys
 import bcrypt
 from datetime import datetime
 from bson.objectid import ObjectId
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class EnergyMonitor:
     def __init__(self):
@@ -13,7 +17,7 @@ class EnergyMonitor:
         self.running = False
         self.user_id = None  # Store logged-in user ID
         self.project_name = None  # Store project name
-        self.client = pymongo.MongoClient("mongodb+srv://your_mongo_uri")
+        self.client = pymongo.MongoClient(os.getenv("MONGO_URI"))
         self.db = self.client["EnergyDB"]
         self.users = self.db["users"]
 
