@@ -1,6 +1,6 @@
-Metadata-Version: 2.4
+Metadata-Version: 2.1
 Name: energyCnV
-Version: 0.1.0
+Version: 1.0.2
 Summary: Track and visualize GPU energy consumption using PyNVML, with MongoDB integration.
 Home-page: https://github.com/siddhartha276/energyCnV
 Author: VIT College
@@ -11,18 +11,6 @@ Classifier: Operating System :: OS Independent
 Classifier: Topic :: Scientific/Engineering :: Visualization
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
-Requires-Dist: nvidia-ml-py3
-Requires-Dist: pymongo
-Requires-Dist: bcrypt
-Dynamic: author
-Dynamic: author-email
-Dynamic: classifier
-Dynamic: description
-Dynamic: description-content-type
-Dynamic: home-page
-Dynamic: requires-dist
-Dynamic: requires-python
-Dynamic: summary
 
 # EnergyMonitor
 
