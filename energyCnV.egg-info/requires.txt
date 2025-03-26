@@ -1,4 +1,5 @@
 nvidia-ml-py3
 pymongo
 bcrypt
+dotenv
 dnspython

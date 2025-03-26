@@ -12,12 +12,13 @@ if os.path.exists(readme_path):
 
 setup(
     name="energyCnV",
-    version="1.0.3",
+    version="1.0.6",
     packages=find_packages(),
     install_requires=[
         "nvidia-ml-py3",
         "pymongo",
         "bcrypt",
+        "dotenv",
         "dnspython",  # Optional: Required for some MongoDB connections
     ],
     author="VIT College",
