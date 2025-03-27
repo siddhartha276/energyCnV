@@ -8,6 +8,7 @@ EnergyMonitor is a Python-based tool that tracks GPU power consumption using **N
 - **Energy Monitoring**: Tracks GPU power usage using NVML.
 - **Project-Based Tracking**: Associates energy consumption data with different projects.
 - **Database Storage**: Saves energy consumption history in MongoDB.
+- **Automatic Timing**: Energy tracking automatically starts and stops when monitoring begins and ends.
 
 ## Installation Requirements
 Before using the tool, install the required dependencies:
@@ -37,21 +38,16 @@ Start tracking energy consumption for a specific project:
 ```python
 monitor.start("ProjectName")
 ```
-If the project does not exist, it prompts the user to create one.
+- If the project does not exist, it prompts the user to create one.
+- The timer **automatically starts** when monitoring begins.
 
 ### 4. Stop Monitoring
 To stop tracking and save energy data:
 ```python
 monitor.stop()
 ```
-This logs the total energy used and duration to the database.
-
-### 5. Update Energy Consumption
-This function continuously updates power consumption:
-```python
-monitor.update_energy()
-```
-This should be run in a loop while monitoring is active.
+- This **automatically calculates** the total energy used and duration.
+- Data is stored in the database.
 
 ## Functions
 ### `login(username, password)`
@@ -70,16 +66,13 @@ This should be run in a loop while monitoring is active.
 **Functionality:**
 - Initializes GPU energy monitoring.
 - Checks if the project exists; if not, prompts user to create one.
+- **Automatically starts the timer** when monitoring begins.
 
 ### `stop()`
 **Functionality:**
-- Stops monitoring and logs energy consumption data.
+- **Automatically stops the timer** and calculates energy consumption.
 - Stores run details like duration, timestamp, and energy used.
-
-### `update_energy()`
-**Functionality:**
-- Continuously updates GPU energy consumption while running.
-- Runs in a loop to track power usage per second.
+- Saves data in MongoDB.
 
 ## Database Structure
 Each user document in MongoDB follows this structure:
@@ -104,7 +97,7 @@ Each user document in MongoDB follows this structure:
 ## Notes
 - Make sure you **log in before starting monitoring**.
 - Ensure your **GPU supports NVML**.
-- The program **exits on incorrect login**.
+- **Timing is handled automatically**; no need for manual tracking.
 
 ## License
 This project is open-source. Feel free to modify and extend it!

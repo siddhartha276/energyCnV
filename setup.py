@@ -12,7 +12,7 @@ if os.path.exists(readme_path):
 
 setup(
     name="energyCnV",
-    version="1.0.7",
+    version="1.0.12",
     packages=find_packages(),
     install_requires=[
         "nvidia-ml-py3",
