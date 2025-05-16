@@ -4,13 +4,9 @@ import pymongo
 import bcrypt
 from datetime import datetime
 from bson.objectid import ObjectId
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
-
-# Get the MongoDB URI from environment
-MONGO_URI = os.getenv("MONGO_URI")
+MONGO_URI = "mongodb+srv://gayatri:12211312@energydb.et7jn.mongodb.net/?retryWrites=true&w=majority&appName=energydb"
 
 class EnergyMonitor:
     def __init__(self):

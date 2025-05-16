@@ -11,15 +11,10 @@ EnergyMonitor is a Python-based tool that tracks GPU power consumption using **N
 - **Automatic Timing**: Energy tracking automatically starts and stops when monitoring begins and ends.
 
 ## Installation Requirements
-Before using the tool, install the required dependencies:
-```sh
-pip install pymongo bcrypt pynvml
+Just install the library. That's all your going to need
 ```
-Ensure you have:
-- A **MongoDB database** (e.g., MongoDB Atlas or a local instance).
-- **NVIDIA GPU and drivers installed**.
-- **NVML library** (included in the NVIDIA drivers).
-
+pip install energyCnV==1.0.26
+```
 ## Usage
 ### 1. Import and Initialize
 ```python
